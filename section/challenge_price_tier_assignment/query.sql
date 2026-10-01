@@ -6,7 +6,7 @@ SELECT
     region,
    CASE
     WHEN price > 700 THEN 'Premium'
-    WHEN price <700 AND price > 300 THEN 'Standard'
+    WHEN price BETWEEN 300 AND 700 THEN 'Standard'
     ELSE 'Budget'
     END AS price_tier
 FROM
